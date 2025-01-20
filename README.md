@@ -156,10 +156,6 @@ See the full list at [W3C Wiki][css-keywords-url].
 - [chalk-pipe][chalk-pipe-url] - Collating cssKeywords data.
 - [yoctocolors][yoctocolors-url] - Implement format function & style description.
 
-## 🔗 Related
-
-- [forex-cli][forex-cli-url] - 💱 A Node.js Library to convert foreign exchange in terminal.
-
 ## 🤝 Contribution
 
 Contributions via Pull Requests or [Issues][issues-url] are welcome.
