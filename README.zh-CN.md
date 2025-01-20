@@ -32,7 +32,7 @@ _[三原色光模式 (RGB)][rgb-model-url]_ / _[CSS 关键字][css-keywords-url]
 
 - 它的 `ESModule` 文件仅有 _9.48KB_, `CommonJS` 也只有 _12.7KB_。
 - 在大量基准测试的样本数量中, 它的速度比 `chalk` 快 _1.7x_ 以上。
-- 除了 _仅支持ANSI关键字_ 的 `colorette`, 它的速度要远快于其他 NPM 上的主流包, 并提供更多的 API 特性。
+- 它和 `colorette` 一样要远快于 NPM 上主流的替代品, 但提供了更多 API 特性。
 - 完全支持 `tree-shaking`, 对于只需要 _yellow_ / _red_ 提示样式的 CLI 程序, 可以无负担的引入。
 - 享受函数式编程。
 
