@@ -198,9 +198,6 @@ This project is licensed under the MIT License. See the [LICENSE][license-url] f
 [license-url]: LICENSE
 
 [perf-en-us-url]: performance/PERFORMANCE.md
-[perf-zh-cn-url]: performance/PERFORMANCE.zh-CN.md
-
-[en-us-url]: README.md
 [zh-cn-url]: README.zh-CN.md
 
 [docs-url]: https://kabeep.github.io/palette

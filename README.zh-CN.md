@@ -188,11 +188,8 @@ console.log(palette('Error'), yellowBright('Warning'), hex('#ff0000')('Message')
 [license-image]: https://img.shields.io/github/license/kabeep/palette?color=slateblue "License"
 [license-url]: LICENSE
 
-[perf-en-us-url]: performance/PERFORMANCE.md
 [perf-zh-cn-url]: performance/PERFORMANCE.zh-CN.md
-
 [en-us-url]: README.md
-[zh-cn-url]: README.zh-CN.md
 
 [docs-url]: https://kabeep.github.io/palette
 [issues-url]: https://github.com/kabeep/palette/issues
