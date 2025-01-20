@@ -1,4 +1,162 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@kabeep/palette</title><meta name="description" content="Documentation for @kabeep/palette"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@kabeep/palette</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>@kabeep/palette</h1></div><div class="tsd-panel tsd-typography"><div align="center">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="IE=edge"><title>@kabeep/palette - v1.0.0-alpha</title><meta name="description" content="Documentation for @kabeep/palette"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/highlight.css"><script defer="" src="assets/main.js"></script><script async="" src="assets/icons.js" id="tsd-icons-script"></script><script async="" src="assets/search.js" id="tsd-search-script"></script><script async="" src="assets/navigation.js" id="tsd-nav-script"></script><style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-color-primary: #00dddd;
+    --md-sys-color-on-primary: #003737;
+    --md-sys-color-primary-container: #004f4f;
+    --md-sys-color-on-primary-container: #03fbfc;
+    --md-sys-color-secondary: #b0cccb;
+    --md-sys-color-on-secondary: #1b3534;
+    --md-sys-color-secondary-container: #324b4b;
+    --md-sys-color-on-secondary-container: #cce8e7;
+    --md-sys-color-tertiary: #b3c8e8;
+    --md-sys-color-on-tertiary: #1c314b;
+    --md-sys-color-tertiary-container: #334863;
+    --md-sys-color-on-tertiary-container: #d3e4ff;
+    --md-sys-color-error: #ffb4ab;
+    --md-sys-color-on-error: #690005;
+    --md-sys-color-error-container: #93000a;
+    --md-sys-color-on-error-container: #ffb4ab;
+    --md-sys-color-background: #191c1c;
+    --md-sys-color-on-background: #e0e3e2;
+    --md-sys-color-surface: #191c1c;
+    --md-sys-color-on-surface: #e0e3e2;
+    --md-sys-color-surface-variant: #3f4948;
+    --md-sys-color-on-surface-variant: #bec9c8;
+    --md-sys-color-outline: #889392;
+    --md-sys-color-outline-variant: #3f4948;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-scrim: #000000;
+    --md-sys-color-inverse-surface: #e0e3e2;
+    --md-sys-color-inverse-on-surface: #2d3131;
+    --md-sys-color-inverse-primary: #006a6a;
+    --md-sys-color-surface-dim: #101414;
+    --md-sys-color-surface-bright: #363a3a;
+    --md-sys-color-surface-container-lowest: #0b0f0f;
+    --md-sys-color-surface-container-low: #191c1c;
+    --md-sys-color-surface-container: #1d2020;
+    --md-sys-color-surface-container-high: #272b2a;
+    --md-sys-color-surface-container-highest: #323535
+  }
+}
+:root[data-theme="dark"] {
+  --md-sys-color-primary: #00dddd;
+  --md-sys-color-on-primary: #003737;
+  --md-sys-color-primary-container: #004f4f;
+  --md-sys-color-on-primary-container: #03fbfc;
+  --md-sys-color-secondary: #b0cccb;
+  --md-sys-color-on-secondary: #1b3534;
+  --md-sys-color-secondary-container: #324b4b;
+  --md-sys-color-on-secondary-container: #cce8e7;
+  --md-sys-color-tertiary: #b3c8e8;
+  --md-sys-color-on-tertiary: #1c314b;
+  --md-sys-color-tertiary-container: #334863;
+  --md-sys-color-on-tertiary-container: #d3e4ff;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffb4ab;
+  --md-sys-color-background: #191c1c;
+  --md-sys-color-on-background: #e0e3e2;
+  --md-sys-color-surface: #191c1c;
+  --md-sys-color-on-surface: #e0e3e2;
+  --md-sys-color-surface-variant: #3f4948;
+  --md-sys-color-on-surface-variant: #bec9c8;
+  --md-sys-color-outline: #889392;
+  --md-sys-color-outline-variant: #3f4948;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-inverse-surface: #e0e3e2;
+  --md-sys-color-inverse-on-surface: #2d3131;
+  --md-sys-color-inverse-primary: #006a6a;
+  --md-sys-color-surface-dim: #101414;
+  --md-sys-color-surface-bright: #363a3a;
+  --md-sys-color-surface-container-lowest: #0b0f0f;
+  --md-sys-color-surface-container-low: #191c1c;
+  --md-sys-color-surface-container: #1d2020;
+  --md-sys-color-surface-container-high: #272b2a;
+  --md-sys-color-surface-container-highest: #323535
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --md-sys-color-primary: #006a6a;
+    --md-sys-color-on-primary: #ffffff;
+    --md-sys-color-primary-container: #03fbfc;
+    --md-sys-color-on-primary-container: #002020;
+    --md-sys-color-secondary: #4a6363;
+    --md-sys-color-on-secondary: #ffffff;
+    --md-sys-color-secondary-container: #cce8e7;
+    --md-sys-color-on-secondary-container: #051f1f;
+    --md-sys-color-tertiary: #4b607c;
+    --md-sys-color-on-tertiary: #ffffff;
+    --md-sys-color-tertiary-container: #d3e4ff;
+    --md-sys-color-on-tertiary-container: #041c35;
+    --md-sys-color-error: #ba1a1a;
+    --md-sys-color-on-error: #ffffff;
+    --md-sys-color-error-container: #ffdad6;
+    --md-sys-color-on-error-container: #410002;
+    --md-sys-color-background: #fafdfc;
+    --md-sys-color-on-background: #191c1c;
+    --md-sys-color-surface: #fafdfc;
+    --md-sys-color-on-surface: #191c1c;
+    --md-sys-color-surface-variant: #dae5e4;
+    --md-sys-color-on-surface-variant: #3f4948;
+    --md-sys-color-outline: #6f7979;
+    --md-sys-color-outline-variant: #bec9c8;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-scrim: #000000;
+    --md-sys-color-inverse-surface: #2d3131;
+    --md-sys-color-inverse-on-surface: #eff1f0;
+    --md-sys-color-inverse-primary: #00dddd;
+    --md-sys-color-surface-dim: #d8dada;
+    --md-sys-color-surface-bright: #f7faf9;
+    --md-sys-color-surface-container-lowest: #ffffff;
+    --md-sys-color-surface-container-low: #f2f4f3;
+    --md-sys-color-surface-container: #eceeed;
+    --md-sys-color-surface-container-high: #e6e9e8;
+    --md-sys-color-surface-container-highest: #e0e3e2
+  }
+}
+:root[data-theme="light"] {
+  --md-sys-color-primary: #006a6a;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #03fbfc;
+  --md-sys-color-on-primary-container: #002020;
+  --md-sys-color-secondary: #4a6363;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #cce8e7;
+  --md-sys-color-on-secondary-container: #051f1f;
+  --md-sys-color-tertiary: #4b607c;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #d3e4ff;
+  --md-sys-color-on-tertiary-container: #041c35;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+  --md-sys-color-background: #fafdfc;
+  --md-sys-color-on-background: #191c1c;
+  --md-sys-color-surface: #fafdfc;
+  --md-sys-color-on-surface: #191c1c;
+  --md-sys-color-surface-variant: #dae5e4;
+  --md-sys-color-on-surface-variant: #3f4948;
+  --md-sys-color-outline: #6f7979;
+  --md-sys-color-outline-variant: #bec9c8;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-inverse-surface: #2d3131;
+  --md-sys-color-inverse-on-surface: #eff1f0;
+  --md-sys-color-inverse-primary: #00dddd;
+  --md-sys-color-surface-dim: #d8dada;
+  --md-sys-color-surface-bright: #f7faf9;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f2f4f3;
+  --md-sys-color-surface-container: #eceeed;
+  --md-sys-color-surface-container-high: #e6e9e8;
+  --md-sys-color-surface-container-highest: #e0e3e2
+}
+</style><link rel="stylesheet" href="assets/material-style.css"></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"></div><div class="field"><div id="tsd-toolbar-links"><a href="https://kabeep.github.io/palette/">Docs</a><a href="https://github.com/kabeep/palette">GitHub</a><a href="https://www.npmjs.com/package/@kabeep/palette">NPM</a></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@kabeep/palette - v1.0.0-alpha</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>@kabeep/palette</h1></div><div class="tsd-panel tsd-typography"><div align="center">
 <h1>Palette</h1>
 <p>🎨 The fastest Node.js library to set terminal text colours &amp; styles with hex, rgb and tree-shaking.</p>
 <p><a href="https://nodejs.org" target="_blank" class="external"><img src="https://img.shields.io/node/v/%40kabeep%2Fpalette?color=lightseagreen" alt="NodeJS" title="Node.js Version"></a>
@@ -7,11 +165,11 @@
 <a href="https://codecov.io/gh/kabeep/palette" target="_blank" class="external"><img src="https://img.shields.io/codecov/c/github/kabeep/palette?logo=codecov&amp;color=mediumvioletred" alt="Codecov" title="Test Coverage"></a>
 <a href="https://bundlephobia.com/package/@kabeep/palette" target="_blank" class="external"><img src="https://img.shields.io/bundlephobia/minzip/@kabeep/palette" alt="BundlePhobia" title="Bundle Size"></a>
 <a href="https://dl.circleci.com/status-badge/redirect/gh/kabeep/palette/tree/master" target="_blank" class="external"><img src="https://dl.circleci.com/status-badge/img/gh/kabeep/palette/tree/master.svg?style=shield" alt="CircleCI" title="Build Status"></a></p>
-<p>English | <a href="README.zh-CN.md">简体中文</a></p>
+<p>English | <a href="documents/____.html">简体中文</a></p>
 </div>
 <a id="md:📖-introduction" class="tsd-anchor"></a><h2 class="tsd-anchor-link">📖 Introduction<a href="#md:📖-introduction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><blockquote>
 <p>While chalk offers a user-friendly, chainable API, I don’t fully agree with
-its <a href="https://github.com/chalk/chalk?tab=readme-ov-file#why-not-switch-to-a-smaller-coloring-package" target="_blank" class="external">defensive response with &quot;a stubborn stance&quot;</a>. Here’s why:</p>
+its <a href="https://github.com/chalk/chalk?tab=readme-ov-file#why-not-switch-to-a-smaller-coloring-package" target="_blank" class="external">defensive response with "a stubborn stance"</a>. Here’s why:</p>
 <ul>
 <li>Its large package size: chalk@4 is <em>101KB</em> and chalk@5 is still <em>43.2KB</em>.</li>
 <li>No <em>tree-shaking</em> support.</li>
@@ -24,7 +182,7 @@ its <a href="https://github.com/chalk/chalk?tab=readme-ov-file#why-not-switch-to
 <p>Compared to other lightweight alternatives, it goes beyond basic ANSI keywords and also supports
 <em><a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet" target="_blank" class="external">Hex Triplet</a></em>, <em><a href="https://en.wikipedia.org/wiki/RGB_color_model" target="_blank" class="external">RGB Color Model</a></em>, and <em><a href="https://www.w3.org/wiki/CSS/Properties/color/keywords" target="_blank" class="external">CSS Keywords</a></em>.</p>
 <p>But this doesn’t mean it compromises on <strong>size</strong> or <strong>performance</strong>.
-On the contrary, it performs excellently in <a href="performance/PERFORMANCE.md">Benchmark Reports</a>:</p>
+On the contrary, it performs excellently in <a href="documents/Benchmarking_Report.html">Benchmark Reports</a>:</p>
 <ul>
 <li>Its <code>ESModule</code> file is just <em>9.48KB</em>, with <code>CommonJS</code> only <em>12.7KB</em>.</li>
 <li>In a wide range of benchmark samples, it outperforms <code>chalk</code> by more than <em>1.7x</em> in speed.</li>
@@ -45,11 +203,11 @@ overhead.</li>
 </code><button type="button">Copy</button></pre>
 
 <a id="md:⚙️-usage" class="tsd-anchor"></a><h2 class="tsd-anchor-link">⚙️ Usage<a href="#md:⚙️-usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p><strong>CommonJS</strong></p>
-<pre><code class="typescript"><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">pipe</span><span class="hl-1"> = </span><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">&#39;lodash.flow&#39;</span><span class="hl-1">);</span><br/><span class="hl-3">const</span><span class="hl-1"> { </span><span class="hl-4">bgRgb</span><span class="hl-1">, </span><span class="hl-4">hex</span><span class="hl-1">, </span><span class="hl-4">keyword</span><span class="hl-1">, </span><span class="hl-4">yellowBright</span><span class="hl-1"> } = </span><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">&#39;@kabeep/palette&#39;</span><span class="hl-1">);</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-0">padding</span><span class="hl-1"> = (</span><span class="hl-5">text</span><span class="hl-1">: </span><span class="hl-6">string</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> </span><span class="hl-2">` </span><span class="hl-3">${</span><span class="hl-5">text</span><span class="hl-3">}</span><span class="hl-2"> `</span><span class="hl-1">;</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">palette</span><span class="hl-1"> = </span><span class="hl-0">pipe</span><span class="hl-1">(</span><span class="hl-0">keyword</span><span class="hl-1">(</span><span class="hl-2">&#39;gold&#39;</span><span class="hl-1">), </span><span class="hl-5">padding</span><span class="hl-1">, </span><span class="hl-0">bgRgb</span><span class="hl-1">(</span><span class="hl-7">255</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">));</span><br/><br/><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">palette</span><span class="hl-1">(</span><span class="hl-2">&#39;Error&#39;</span><span class="hl-1">), </span><span class="hl-0">yellowBright</span><span class="hl-1">(</span><span class="hl-2">&#39;Warning&#39;</span><span class="hl-1">), </span><span class="hl-0">hex</span><span class="hl-1">(</span><span class="hl-2">&#39;#ff0000&#39;</span><span class="hl-1">)(</span><span class="hl-2">&#39;Message&#39;</span><span class="hl-1">));</span>
+<pre><code class="typescript"><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">pipe</span><span class="hl-1"> = </span><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">'lodash.flow'</span><span class="hl-1">);</span><br><span class="hl-3">const</span><span class="hl-1"> { </span><span class="hl-4">bgRgb</span><span class="hl-1">, </span><span class="hl-4">hex</span><span class="hl-1">, </span><span class="hl-4">keyword</span><span class="hl-1">, </span><span class="hl-4">yellowBright</span><span class="hl-1"> } = </span><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">'@kabeep/palette'</span><span class="hl-1">);</span><br><br><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-0">padding</span><span class="hl-1"> = (</span><span class="hl-5">text</span><span class="hl-1">: </span><span class="hl-6">string</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> </span><span class="hl-2">` </span><span class="hl-3">${</span><span class="hl-5">text</span><span class="hl-3">}</span><span class="hl-2"> `</span><span class="hl-1">;</span><br><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">palette</span><span class="hl-1"> = </span><span class="hl-0">pipe</span><span class="hl-1">(</span><span class="hl-0">keyword</span><span class="hl-1">(</span><span class="hl-2">'gold'</span><span class="hl-1">), </span><span class="hl-5">padding</span><span class="hl-1">, </span><span class="hl-0">bgRgb</span><span class="hl-1">(</span><span class="hl-7">255</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">));</span><br><br><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">palette</span><span class="hl-1">(</span><span class="hl-2">'Error'</span><span class="hl-1">), </span><span class="hl-0">yellowBright</span><span class="hl-1">(</span><span class="hl-2">'Warning'</span><span class="hl-1">), </span><span class="hl-0">hex</span><span class="hl-1">(</span><span class="hl-2">'#ff0000'</span><span class="hl-1">)(</span><span class="hl-2">'Message'</span><span class="hl-1">));</span>
 </code><button type="button">Copy</button></pre>
 
 <p><strong>ESModule</strong></p>
-<pre><code class="typescript"><span class="hl-8">import</span><span class="hl-1"> </span><span class="hl-5">pipe</span><span class="hl-1"> </span><span class="hl-8">from</span><span class="hl-1"> </span><span class="hl-2">&#39;lodash.flow&#39;</span><span class="hl-1">;</span><br/><span class="hl-8">import</span><span class="hl-1"> { </span><span class="hl-5">bgRgb</span><span class="hl-1">, </span><span class="hl-5">hex</span><span class="hl-1">, </span><span class="hl-5">keyword</span><span class="hl-1">, </span><span class="hl-5">yellowBright</span><span class="hl-1"> } </span><span class="hl-8">from</span><span class="hl-1"> </span><span class="hl-2">&#39;@kabeep/palette&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-0">padding</span><span class="hl-1"> = (</span><span class="hl-5">text</span><span class="hl-1">: </span><span class="hl-6">string</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> </span><span class="hl-2">` </span><span class="hl-3">${</span><span class="hl-5">text</span><span class="hl-3">}</span><span class="hl-2"> `</span><span class="hl-1">;</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">palette</span><span class="hl-1"> = </span><span class="hl-0">pipe</span><span class="hl-1">(</span><span class="hl-0">keyword</span><span class="hl-1">(</span><span class="hl-2">&#39;gold&#39;</span><span class="hl-1">), </span><span class="hl-5">padding</span><span class="hl-1">, </span><span class="hl-0">bgRgb</span><span class="hl-1">(</span><span class="hl-7">255</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">));</span><br/><br/><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">palette</span><span class="hl-1">(</span><span class="hl-2">&#39;Error&#39;</span><span class="hl-1">), </span><span class="hl-0">yellowBright</span><span class="hl-1">(</span><span class="hl-2">&#39;Warning&#39;</span><span class="hl-1">), </span><span class="hl-0">hex</span><span class="hl-1">(</span><span class="hl-2">&#39;#ff0000&#39;</span><span class="hl-1">)(</span><span class="hl-2">&#39;Message&#39;</span><span class="hl-1">));</span>
+<pre><code class="typescript"><span class="hl-8">import</span><span class="hl-1"> </span><span class="hl-5">pipe</span><span class="hl-1"> </span><span class="hl-8">from</span><span class="hl-1"> </span><span class="hl-2">'lodash.flow'</span><span class="hl-1">;</span><br><span class="hl-8">import</span><span class="hl-1"> { </span><span class="hl-5">bgRgb</span><span class="hl-1">, </span><span class="hl-5">hex</span><span class="hl-1">, </span><span class="hl-5">keyword</span><span class="hl-1">, </span><span class="hl-5">yellowBright</span><span class="hl-1"> } </span><span class="hl-8">from</span><span class="hl-1"> </span><span class="hl-2">'@kabeep/palette'</span><span class="hl-1">;</span><br><br><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-0">padding</span><span class="hl-1"> = (</span><span class="hl-5">text</span><span class="hl-1">: </span><span class="hl-6">string</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> </span><span class="hl-2">` </span><span class="hl-3">${</span><span class="hl-5">text</span><span class="hl-3">}</span><span class="hl-2"> `</span><span class="hl-1">;</span><br><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">palette</span><span class="hl-1"> = </span><span class="hl-0">pipe</span><span class="hl-1">(</span><span class="hl-0">keyword</span><span class="hl-1">(</span><span class="hl-2">'gold'</span><span class="hl-1">), </span><span class="hl-5">padding</span><span class="hl-1">, </span><span class="hl-0">bgRgb</span><span class="hl-1">(</span><span class="hl-7">255</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">));</span><br><br><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">palette</span><span class="hl-1">(</span><span class="hl-2">'Error'</span><span class="hl-1">), </span><span class="hl-0">yellowBright</span><span class="hl-1">(</span><span class="hl-2">'Warning'</span><span class="hl-1">), </span><span class="hl-0">hex</span><span class="hl-1">(</span><span class="hl-2">'#ff0000'</span><span class="hl-1">)(</span><span class="hl-2">'Message'</span><span class="hl-1">));</span>
 </code><button type="button">Copy</button></pre>
 
 <a id="md:🌈-styles" class="tsd-anchor"></a><h2 class="tsd-anchor-link">🌈 Styles<a href="#md:🌈-styles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="md:modifiers" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Modifiers<a href="#md:modifiers" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
@@ -121,4 +279,20 @@ overhead.</li>
 </ul>
 <a id="md:🤝-contribution" class="tsd-anchor"></a><h2 class="tsd-anchor-link">🤝 Contribution<a href="#md:🤝-contribution" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Contributions via Pull Requests or <a href="https://github.com/kabeep/palette/issues" target="_blank" class="external">Issues</a> are welcome.</p>
 <a id="md:📄-license" class="tsd-anchor"></a><h2 class="tsd-anchor-link">📄 License<a href="#md:📄-license" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
-</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:📖-introduction"><span>📖 <wbr/>Introduction</span></a><a href="#md:📦-installation"><span>📦 <wbr/>Installation</span></a><a href="#md:⚙️-usage"><span>⚙️ <wbr/>Usage</span></a><a href="#md:🌈-styles"><span>🌈 <wbr/>Styles</span></a><ul><li><a href="#md:modifiers"><span>Modifiers</span></a></li><li><a href="#md:foreground-colors"><span>Foreground <wbr/>Colors</span></a></li><li><a href="#md:background-colors"><span>Background <wbr/>Colors</span></a></li><li><a href="#md:hex-triplet"><span>Hex <wbr/>Triplet</span></a></li><li><a href="#md:rgb-color-model"><span>RGB <wbr/>Color <wbr/>Model</span></a></li><li><a href="#md:css-color-keywords"><span>CSS <wbr/>Color <wbr/>Keywords</span></a></li></ul><a href="#md:💐-credits"><span>💐 <wbr/>Credits</span></a><a href="#md:🔗-related"><span>🔗 <wbr/>Related</span></a><a href="#md:🤝-contribution"><span>🤝 <wbr/>Contribution</span></a><a href="#md:📄-license"><span>📄 <wbr/>License</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>@kabeep/palette</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked=""><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open="" class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:📖-introduction"><span>📖 <wbr>Introduction</span></a><a href="#md:📦-installation"><span>📦 <wbr>Installation</span></a><a href="#md:⚙️-usage"><span>⚙️ <wbr>Usage</span></a><a href="#md:🌈-styles"><span>🌈 <wbr>Styles</span></a><ul><li><a href="#md:modifiers"><span>Modifiers</span></a></li><li><a href="#md:foreground-colors"><span>Foreground <wbr>Colors</span></a></li><li><a href="#md:background-colors"><span>Background <wbr>Colors</span></a></li><li><a href="#md:hex-triplet"><span>Hex <wbr>Triplet</span></a></li><li><a href="#md:rgb-color-model"><span>RGB <wbr>Color <wbr>Model</span></a></li><li><a href="#md:css-color-keywords"><span>CSS <wbr>Color <wbr>Keywords</span></a></li></ul><a href="#md:💐-credits"><span>💐 <wbr>Credits</span></a><a href="#md:🔗-related"><span>🔗 <wbr>Related</span></a><a href="#md:🤝-contribution"><span>🤝 <wbr>Contribution</span></a><a href="#md:📄-license"><span>📄 <wbr>License</span></a></div></details></div><div class="site-menu"><nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://kabeep.github.io/palette/" class="tsd-nav-link">Docs</a><a href="https://github.com/kabeep/palette" class="tsd-nav-link">GitHub</a><a href="https://www.npmjs.com/package/@kabeep/palette" class="tsd-nav-link">NPM</a></nav><nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>@kabeep/palette</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div><script>
+          try {
+            const generateLinkElement = document.querySelector(".tsd-generator a");
+            const link = document.createElement("a");
+            Object.assign(link, {
+              href: "https://github.com/dmnsgn/typedoc-material-theme",
+              target: "_blank",
+              rel: "noreferrer",
+              innerText: "typedoc-material-theme."
+            });
+            generateLinkElement.insertAdjacentElement("afterend", link);
+            generateLinkElement.insertAdjacentText("afterend", " with ");
+          } catch (error) {
+
+          }
+        </script>
+</body></html>

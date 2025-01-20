@@ -1,0 +1,290 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="IE=edge"><title>简体中文 | @kabeep/palette - v1.0.0-alpha</title><meta name="description" content="Documentation for @kabeep/palette"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/highlight.css"><script defer="" src="../assets/main.js"></script><script async="" src="../assets/icons.js" id="tsd-icons-script"></script><script async="" src="../assets/search.js" id="tsd-search-script"></script><script async="" src="../assets/navigation.js" id="tsd-nav-script"></script><style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-color-primary: #00dddd;
+    --md-sys-color-on-primary: #003737;
+    --md-sys-color-primary-container: #004f4f;
+    --md-sys-color-on-primary-container: #03fbfc;
+    --md-sys-color-secondary: #b0cccb;
+    --md-sys-color-on-secondary: #1b3534;
+    --md-sys-color-secondary-container: #324b4b;
+    --md-sys-color-on-secondary-container: #cce8e7;
+    --md-sys-color-tertiary: #b3c8e8;
+    --md-sys-color-on-tertiary: #1c314b;
+    --md-sys-color-tertiary-container: #334863;
+    --md-sys-color-on-tertiary-container: #d3e4ff;
+    --md-sys-color-error: #ffb4ab;
+    --md-sys-color-on-error: #690005;
+    --md-sys-color-error-container: #93000a;
+    --md-sys-color-on-error-container: #ffb4ab;
+    --md-sys-color-background: #191c1c;
+    --md-sys-color-on-background: #e0e3e2;
+    --md-sys-color-surface: #191c1c;
+    --md-sys-color-on-surface: #e0e3e2;
+    --md-sys-color-surface-variant: #3f4948;
+    --md-sys-color-on-surface-variant: #bec9c8;
+    --md-sys-color-outline: #889392;
+    --md-sys-color-outline-variant: #3f4948;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-scrim: #000000;
+    --md-sys-color-inverse-surface: #e0e3e2;
+    --md-sys-color-inverse-on-surface: #2d3131;
+    --md-sys-color-inverse-primary: #006a6a;
+    --md-sys-color-surface-dim: #101414;
+    --md-sys-color-surface-bright: #363a3a;
+    --md-sys-color-surface-container-lowest: #0b0f0f;
+    --md-sys-color-surface-container-low: #191c1c;
+    --md-sys-color-surface-container: #1d2020;
+    --md-sys-color-surface-container-high: #272b2a;
+    --md-sys-color-surface-container-highest: #323535
+  }
+}
+:root[data-theme="dark"] {
+  --md-sys-color-primary: #00dddd;
+  --md-sys-color-on-primary: #003737;
+  --md-sys-color-primary-container: #004f4f;
+  --md-sys-color-on-primary-container: #03fbfc;
+  --md-sys-color-secondary: #b0cccb;
+  --md-sys-color-on-secondary: #1b3534;
+  --md-sys-color-secondary-container: #324b4b;
+  --md-sys-color-on-secondary-container: #cce8e7;
+  --md-sys-color-tertiary: #b3c8e8;
+  --md-sys-color-on-tertiary: #1c314b;
+  --md-sys-color-tertiary-container: #334863;
+  --md-sys-color-on-tertiary-container: #d3e4ff;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffb4ab;
+  --md-sys-color-background: #191c1c;
+  --md-sys-color-on-background: #e0e3e2;
+  --md-sys-color-surface: #191c1c;
+  --md-sys-color-on-surface: #e0e3e2;
+  --md-sys-color-surface-variant: #3f4948;
+  --md-sys-color-on-surface-variant: #bec9c8;
+  --md-sys-color-outline: #889392;
+  --md-sys-color-outline-variant: #3f4948;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-inverse-surface: #e0e3e2;
+  --md-sys-color-inverse-on-surface: #2d3131;
+  --md-sys-color-inverse-primary: #006a6a;
+  --md-sys-color-surface-dim: #101414;
+  --md-sys-color-surface-bright: #363a3a;
+  --md-sys-color-surface-container-lowest: #0b0f0f;
+  --md-sys-color-surface-container-low: #191c1c;
+  --md-sys-color-surface-container: #1d2020;
+  --md-sys-color-surface-container-high: #272b2a;
+  --md-sys-color-surface-container-highest: #323535
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --md-sys-color-primary: #006a6a;
+    --md-sys-color-on-primary: #ffffff;
+    --md-sys-color-primary-container: #03fbfc;
+    --md-sys-color-on-primary-container: #002020;
+    --md-sys-color-secondary: #4a6363;
+    --md-sys-color-on-secondary: #ffffff;
+    --md-sys-color-secondary-container: #cce8e7;
+    --md-sys-color-on-secondary-container: #051f1f;
+    --md-sys-color-tertiary: #4b607c;
+    --md-sys-color-on-tertiary: #ffffff;
+    --md-sys-color-tertiary-container: #d3e4ff;
+    --md-sys-color-on-tertiary-container: #041c35;
+    --md-sys-color-error: #ba1a1a;
+    --md-sys-color-on-error: #ffffff;
+    --md-sys-color-error-container: #ffdad6;
+    --md-sys-color-on-error-container: #410002;
+    --md-sys-color-background: #fafdfc;
+    --md-sys-color-on-background: #191c1c;
+    --md-sys-color-surface: #fafdfc;
+    --md-sys-color-on-surface: #191c1c;
+    --md-sys-color-surface-variant: #dae5e4;
+    --md-sys-color-on-surface-variant: #3f4948;
+    --md-sys-color-outline: #6f7979;
+    --md-sys-color-outline-variant: #bec9c8;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-scrim: #000000;
+    --md-sys-color-inverse-surface: #2d3131;
+    --md-sys-color-inverse-on-surface: #eff1f0;
+    --md-sys-color-inverse-primary: #00dddd;
+    --md-sys-color-surface-dim: #d8dada;
+    --md-sys-color-surface-bright: #f7faf9;
+    --md-sys-color-surface-container-lowest: #ffffff;
+    --md-sys-color-surface-container-low: #f2f4f3;
+    --md-sys-color-surface-container: #eceeed;
+    --md-sys-color-surface-container-high: #e6e9e8;
+    --md-sys-color-surface-container-highest: #e0e3e2
+  }
+}
+:root[data-theme="light"] {
+  --md-sys-color-primary: #006a6a;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #03fbfc;
+  --md-sys-color-on-primary-container: #002020;
+  --md-sys-color-secondary: #4a6363;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #cce8e7;
+  --md-sys-color-on-secondary-container: #051f1f;
+  --md-sys-color-tertiary: #4b607c;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #d3e4ff;
+  --md-sys-color-on-tertiary-container: #041c35;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+  --md-sys-color-background: #fafdfc;
+  --md-sys-color-on-background: #191c1c;
+  --md-sys-color-surface: #fafdfc;
+  --md-sys-color-on-surface: #191c1c;
+  --md-sys-color-surface-variant: #dae5e4;
+  --md-sys-color-on-surface-variant: #3f4948;
+  --md-sys-color-outline: #6f7979;
+  --md-sys-color-outline-variant: #bec9c8;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-inverse-surface: #2d3131;
+  --md-sys-color-inverse-on-surface: #eff1f0;
+  --md-sys-color-inverse-primary: #00dddd;
+  --md-sys-color-surface-dim: #d8dada;
+  --md-sys-color-surface-bright: #f7faf9;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f2f4f3;
+  --md-sys-color-surface-container: #eceeed;
+  --md-sys-color-surface-container-high: #e6e9e8;
+  --md-sys-color-surface-container-highest: #e0e3e2
+}
+</style><link rel="stylesheet" href="../assets/material-style.css"></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"></div><div class="field"><div id="tsd-toolbar-links"><a href="https://kabeep.github.io/palette/">Docs</a><a href="https://github.com/kabeep/palette">GitHub</a><a href="https://www.npmjs.com/package/@kabeep/palette">NPM</a></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@kabeep/palette - v1.0.0-alpha</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../modules.html">@kabeep/palette</a></li><li><a href="____.html">简体中文</a></li></ul></div><div class="tsd-panel tsd-typography"><div align="center">
+<h1>Palette</h1>
+<p>🎨 最快的 Node.js 库, 支持 Hex、RGB 和 tree-shaking 设置终端文本的颜色和样式</p>
+<p><a href="https://nodejs.org" target="_blank" class="external"><img src="https://img.shields.io/node/v/%40kabeep%2Fpalette?color=lightseagreen" alt="NodeJS" title="Node.js Version"></a>
+<a href="LICENSE"><img src="https://img.shields.io/github/license/kabeep/palette?color=slateblue" alt="License" title="License"></a>
+<a href="https://www.npmjs.com/package/@kabeep/palette" target="_blank" class="external"><img src="https://img.shields.io/npm/d18m/%40kabeep%2Fpalette?color=cornflowerblue" alt="NPM" title="NPM Downloads"></a>
+<a href="https://codecov.io/gh/kabeep/palette" target="_blank" class="external"><img src="https://img.shields.io/codecov/c/github/kabeep/palette?logo=codecov&amp;color=mediumvioletred" alt="Codecov" title="Test Coverage"></a>
+<a href="https://bundlephobia.com/package/@kabeep/palette" target="_blank" class="external"><img src="https://img.shields.io/bundlephobia/minzip/@kabeep/palette" alt="BundlePhobia" title="Bundle Size"></a>
+<a href="https://dl.circleci.com/status-badge/redirect/gh/kabeep/palette/tree/master" target="_blank" class="external"><img src="https://dl.circleci.com/status-badge/img/gh/kabeep/palette/tree/master.svg?style=shield" alt="CircleCI" title="Build Status"></a></p>
+<p><a href="../index.html">English</a> | 简体中文</p>
+</div>
+<a id="md:📖-简介" class="tsd-anchor"></a><h2 class="tsd-anchor-link">📖 简介<a href="#md:📖-简介" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><blockquote>
+<p><code>chalk</code> 有友好的链式 API, 但也是我认为它不足的地方, 我并不完全认同它 <a href="https://github.com/chalk/chalk?tab=readme-ov-file#why-not-switch-to-a-smaller-coloring-package" target="_blank" class="external">"固执己见"的防守型回答</a>:</p>
+<ul>
+<li>庞大的包体积, chalk@4 的体积是 <em>101KB</em>, chalk@5 也有 <em>43.2KB</em>。</li>
+<li>没有 <em>tree-shaking</em>。</li>
+<li>不支持 <em>pipe/compose</em> 函数式编程。</li>
+<li>在轻量场景中远不如 <em>静态ANSI字符串</em> 的性价比。</li>
+</ul>
+</blockquote>
+<p>因此我用两个小时时间开发了 <code>@kabeep/palette</code> 包, 它和 <code>chalk</code> 一样支持 <em>ANSI 16 色</em>, <em>256 色</em> 和 <em>16m 真彩色</em>。</p>
+<p>比起其他轻量包, 除了基础的 ANSI 关键字, 它还支持 <em><a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet" target="_blank" class="external">十六进制数字表示法 (Hex)</a></em> /
+<em><a href="https://en.wikipedia.org/wiki/RGB_color_model" target="_blank" class="external">三原色光模式 (RGB)</a></em> / <em><a href="https://www.w3.org/wiki/CSS/Properties/color/keywords" target="_blank" class="external">CSS 关键字</a></em>。</p>
+<p>但这不意味着它牺牲了 <strong>体积</strong> 和 <strong>速度</strong>, 相反的它在 <a href="./______.html">基准测试报告</a> 中表现优异:</p>
+<ul>
+<li>它的 <code>ESModule</code> 文件仅有 <em>9.48KB</em>, <code>CommonJS</code> 也只有 <em>12.7KB</em>。</li>
+<li>在大量基准测试的样本数量中, 它的速度比 <code>chalk</code> 快 <em>1.7x</em> 以上。</li>
+<li>除了 <em>仅支持ANSI关键字</em> 的 <code>colorette</code>, 它的速度要远快于其他 NPM 上的主流包, 并提供更多的 API 特性。</li>
+<li>完全支持 <code>tree-shaking</code>, 对于只需要 <em>yellow</em> / <em>red</em> 提示样式的 CLI 程序, 可以无负担的引入。</li>
+<li>享受函数式编程。</li>
+</ul>
+<p>查看 <a href="https://kabeep.github.io/palette" target="_blank" class="external">文档</a>。</p>
+<a id="md:📦-安装" class="tsd-anchor"></a><h2 class="tsd-anchor-link">📦 安装<a href="#md:📦-安装" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">@kabeep/palette</span><span class="hl-1"> </span><span class="hl-3">--save</span>
+</code><button type="button">Copy</button></pre>
+
+<pre><code class="bash"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-2">@kabeep/palette</span>
+</code><button type="button">Copy</button></pre>
+
+<pre><code class="bash"><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-2">@kabeep/palette</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:⚙️-使用" class="tsd-anchor"></a><h2 class="tsd-anchor-link">⚙️ 使用<a href="#md:⚙️-使用" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p><strong>CommonJS</strong></p>
+<pre><code class="typescript"><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">pipe</span><span class="hl-1"> = </span><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">'lodash.flow'</span><span class="hl-1">);</span><br><span class="hl-3">const</span><span class="hl-1"> { </span><span class="hl-4">bgRgb</span><span class="hl-1">, </span><span class="hl-4">hex</span><span class="hl-1">, </span><span class="hl-4">keyword</span><span class="hl-1">, </span><span class="hl-4">yellowBright</span><span class="hl-1"> } = </span><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">'@kabeep/palette'</span><span class="hl-1">);</span><br><br><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-0">padding</span><span class="hl-1"> = (</span><span class="hl-5">text</span><span class="hl-1">: </span><span class="hl-6">string</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> </span><span class="hl-2">` </span><span class="hl-3">${</span><span class="hl-5">text</span><span class="hl-3">}</span><span class="hl-2"> `</span><span class="hl-1">;</span><br><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">palette</span><span class="hl-1"> = </span><span class="hl-0">pipe</span><span class="hl-1">(</span><span class="hl-0">keyword</span><span class="hl-1">(</span><span class="hl-2">'gold'</span><span class="hl-1">), </span><span class="hl-5">padding</span><span class="hl-1">, </span><span class="hl-0">bgRgb</span><span class="hl-1">(</span><span class="hl-7">255</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">));</span><br><br><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">palette</span><span class="hl-1">(</span><span class="hl-2">'Error'</span><span class="hl-1">), </span><span class="hl-0">yellowBright</span><span class="hl-1">(</span><span class="hl-2">'Warning'</span><span class="hl-1">), </span><span class="hl-0">hex</span><span class="hl-1">(</span><span class="hl-2">'#ff0000'</span><span class="hl-1">)(</span><span class="hl-2">'Message'</span><span class="hl-1">));</span>
+</code><button type="button">Copy</button></pre>
+
+<p><strong>ESModule</strong></p>
+<pre><code class="typescript"><span class="hl-8">import</span><span class="hl-1"> </span><span class="hl-5">pipe</span><span class="hl-1"> </span><span class="hl-8">from</span><span class="hl-1"> </span><span class="hl-2">'lodash.flow'</span><span class="hl-1">;</span><br><span class="hl-8">import</span><span class="hl-1"> { </span><span class="hl-5">bgRgb</span><span class="hl-1">, </span><span class="hl-5">hex</span><span class="hl-1">, </span><span class="hl-5">keyword</span><span class="hl-1">, </span><span class="hl-5">yellowBright</span><span class="hl-1"> } </span><span class="hl-8">from</span><span class="hl-1"> </span><span class="hl-2">'@kabeep/palette'</span><span class="hl-1">;</span><br><br><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-0">padding</span><span class="hl-1"> = (</span><span class="hl-5">text</span><span class="hl-1">: </span><span class="hl-6">string</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> </span><span class="hl-2">` </span><span class="hl-3">${</span><span class="hl-5">text</span><span class="hl-3">}</span><span class="hl-2"> `</span><span class="hl-1">;</span><br><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">palette</span><span class="hl-1"> = </span><span class="hl-0">pipe</span><span class="hl-1">(</span><span class="hl-0">keyword</span><span class="hl-1">(</span><span class="hl-2">'gold'</span><span class="hl-1">), </span><span class="hl-5">padding</span><span class="hl-1">, </span><span class="hl-0">bgRgb</span><span class="hl-1">(</span><span class="hl-7">255</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">));</span><br><br><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">palette</span><span class="hl-1">(</span><span class="hl-2">'Error'</span><span class="hl-1">), </span><span class="hl-0">yellowBright</span><span class="hl-1">(</span><span class="hl-2">'Warning'</span><span class="hl-1">), </span><span class="hl-0">hex</span><span class="hl-1">(</span><span class="hl-2">'#ff0000'</span><span class="hl-1">)(</span><span class="hl-2">'Message'</span><span class="hl-1">));</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:🌈-样式" class="tsd-anchor"></a><h2 class="tsd-anchor-link">🌈 样式<a href="#md:🌈-样式" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="md:修饰符" class="tsd-anchor"></a><h3 class="tsd-anchor-link">修饰符<a href="#md:修饰符" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>reset - 重置当前样式。</li>
+<li>bold - 粗体文本。</li>
+<li>dim - 降低文本不透明度。</li>
+<li>italic - 将文本设置为斜体 (未得到广泛支持)。</li>
+<li>underline - 文本下划线 (未得到广泛支持)。</li>
+<li>overline - 文本上划线 (未得到广泛支持)。</li>
+<li>inverse- 反转背景和前景色。</li>
+<li>hidden - 打印文本但使其不可见。</li>
+<li>strikethrough - 文本删除线 (未得到广泛支持)。</li>
+</ul>
+<a id="md:前景色" class="tsd-anchor"></a><h3 class="tsd-anchor-link">前景色<a href="#md:前景色" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>black - 黑色文本</li>
+<li>red - 红色文本</li>
+<li>green - 绿色文本</li>
+<li>yellow - 黄色文本</li>
+<li>blue - 蓝色文本</li>
+<li>magenta - 品红色文本</li>
+<li>cyan - 青色文本</li>
+<li>white - 白色文本</li>
+<li>gray - 灰色文本</li>
+<li>redBright - 亮红色文本</li>
+<li>greenBright - 亮绿色文本</li>
+<li>yellowBright - 亮黄色文本</li>
+<li>blueBright - 亮蓝色文本</li>
+<li>magentaBright - 亮品红色文本</li>
+<li>cyanBright - 亮青色文本</li>
+<li>whiteBright - 亮白色文本</li>
+</ul>
+<a id="md:背景色" class="tsd-anchor"></a><h3 class="tsd-anchor-link">背景色<a href="#md:背景色" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>bgBlack - 黑色背景</li>
+<li>bgRed - 红色背景</li>
+<li>bgGreen - 绿色背景</li>
+<li>bgYellow - 黄色背景</li>
+<li>bgBlue - 蓝色背景</li>
+<li>bgMagenta - 品红色背景</li>
+<li>bgCyan - 青色背景</li>
+<li>bgWhite - 白色背景</li>
+<li>bgGray - 灰色背景</li>
+<li>bgRedBright - 亮红色背景</li>
+<li>bgGreenBright - 亮绿色背景</li>
+<li>bgYellowBright - 亮黄色背景</li>
+<li>bgBlueBright - 亮蓝色背景</li>
+<li>bgMagentaBright - 亮品红色背景</li>
+<li>bgCyanBright - 亮青色背景</li>
+<li>bgWhiteBright - 亮白色背景</li>
+</ul>
+<a id="md:十六进制数字表示法-hex" class="tsd-anchor"></a><h3 class="tsd-anchor-link">十六进制数字表示法 (Hex)<a href="#md:十六进制数字表示法-hex" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>hex - (三位) #fff, ...</li>
+<li>hex - (六位) #ffffff, ...</li>
+<li>hex - (无#号) fff, ffffff, ...</li>
+</ul>
+<a id="md:三原色光模式-rgb" class="tsd-anchor"></a><h3 class="tsd-anchor-link">三原色光模式 (RGB)<a href="#md:三原色光模式-rgb" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>rgb - (255, 255, 255), ...</li>
+</ul>
+<a id="md:css-关键字" class="tsd-anchor"></a><h3 class="tsd-anchor-link">CSS 关键字<a href="#md:css-关键字" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>在 <a href="https://www.w3.org/wiki/CSS/Properties/color/keywords" target="_blank" class="external">W3C Wiki</a> 查看完整列表。</p>
+<ul>
+<li>keyword - azure, gold, indigo, ...</li>
+</ul>
+<a id="md:💐-致谢" class="tsd-anchor"></a><h2 class="tsd-anchor-link">💐 致谢<a href="#md:💐-致谢" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li><a href="https://github.com/chalk/chalk/blob/main/source/vendor/ansi-styles/index.js#L134" target="_blank" class="external">ansi-styles</a> - 实现了 hexToRgb 函数。</li>
+<li><a href="https://github.com/LitoMore/chalk-pipe/blob/main/source/styles.ts" target="_blank" class="external">chalk-pipe</a> - 整理 cssKeywords 数据。</li>
+<li><a href="https://github.com/sindresorhus/yoctocolors/blob/main/base.js#L27" target="_blank" class="external">yoctocolors</a> - 实现了 format 函数。</li>
+</ul>
+<a id="md:🤝-贡献" class="tsd-anchor"></a><h2 class="tsd-anchor-link">🤝 贡献<a href="#md:🤝-贡献" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>欢迎通过 Pull Requests 或 <a href="https://github.com/kabeep/palette/issues" target="_blank" class="external">Issues</a> 来贡献你的想法和代码。</p>
+<a id="md:📄-许可" class="tsd-anchor"></a><h2 class="tsd-anchor-link">📄 许可<a href="#md:📄-许可" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>本项目采用 MIT 许可证。详情请见 <a href="LICENSE">LICENSE</a> 文件。</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked=""><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open="" class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:📖-简介"><span>📖 简介</span></a><a href="#md:📦-安装"><span>📦 安装</span></a><a href="#md:⚙️-使用"><span>⚙️ 使用</span></a><a href="#md:🌈-样式"><span>🌈 样式</span></a><ul><li><a href="#md:修饰符"><span>修饰符</span></a></li><li><a href="#md:前景色"><span>前景色</span></a></li><li><a href="#md:背景色"><span>背景色</span></a></li><li><a href="#md:十六进制数字表示法-hex"><span>十六进制数字表示法 (<wbr>Hex)</span></a></li><li><a href="#md:三原色光模式-rgb"><span>三原色光模式 (RGB)</span></a></li><li><a href="#md:css-关键字"><span>CSS 关键字</span></a></li></ul><a href="#md:💐-致谢"><span>💐 致谢</span></a><a href="#md:🤝-贡献"><span>🤝 贡献</span></a><a href="#md:📄-许可"><span>📄 许可</span></a></div></details></div><div class="site-menu"><nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://kabeep.github.io/palette/" class="tsd-nav-link">Docs</a><a href="https://github.com/kabeep/palette" class="tsd-nav-link">GitHub</a><a href="https://www.npmjs.com/package/@kabeep/palette" class="tsd-nav-link">NPM</a></nav><nav class="tsd-navigation"><a href="../modules.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>@kabeep/palette</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div><script>
+          try {
+            const generateLinkElement = document.querySelector(".tsd-generator a");
+            const link = document.createElement("a");
+            Object.assign(link, {
+              href: "https://github.com/dmnsgn/typedoc-material-theme",
+              target: "_blank",
+              rel: "noreferrer",
+              innerText: "typedoc-material-theme."
+            });
+            generateLinkElement.insertAdjacentElement("afterend", link);
+            generateLinkElement.insertAdjacentText("afterend", " with ");
+          } catch (error) {
+
+          }
+        </script>
+</body></html>
