@@ -1,7 +1,7 @@
 {
     "name": "@kabeep/palette",
-    "description": "The fastest Node.js library to set terminal text colours & styles with hex, rgb and tree shaking.",
-    "version": "1.0.0-alpha",
+    "description": "The fastest Node.js library to set terminal text colours & styles with hex, rgb and tree-shaking.",
+    "version": "1.0.0",
     "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
