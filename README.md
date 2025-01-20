@@ -35,8 +35,8 @@ On the contrary, it performs excellently in [Benchmark Reports][perf-en-us-url]:
 
 - Its `ESModule` file is just _9.48KB_, with `CommonJS` only _12.7KB_.
 - In a wide range of benchmark samples, it outperforms `chalk` by more than _1.7x_ in speed.
-- It’s significantly **faster than** other popular packages on npm, like colorette, which _only supports ANSI keywords_,
-  and offers more API features.
+- It’s significantly **faster than** other popular packages on npm, like `colorette`,
+  which _only supports ANSI keywords_, and offers more API features.
 - Fully supports `tree-shaking`, so CLI apps needing only basic styles like _yellow_ or _red_ can import it with no
   overhead.
 - Enjoy functional programming with ease.
