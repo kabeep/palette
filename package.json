@@ -1,0 +1,97 @@
+{
+    "name": "@kabeep/palette",
+    "description": "The fastest Node.js library to set terminal text colours & styles with hex, rgb and tree shaking.",
+    "version": "1.0.0-alpha",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        "require": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "import": {
+            "types": "./dist/index.d.mts",
+            "default": "./dist/index.mjs"
+        }
+    },
+    "files": ["dist"],
+    "scripts": {
+        "prepare": "husky install",
+        "lint": "biome check src --write",
+        "lint:staged": "biome check src --write --staged",
+        "lint:changed": "biome check src --write --changed",
+        "lint-staged": "lint-staged",
+        "pretest": "npm run lint",
+        "test": "vitest run",
+        "test:changed": "vitest run --changed",
+        "test:ui": "vitest --ui",
+        "test:watch": "vitest watch",
+        "test:coverage": "vitest run --coverage",
+        "test:benchmark": "vitest bench",
+        "build:clean": "rimraf dist",
+        "build": "npm run build:clean && tsup && size-limit dist/index.js && cloc src",
+        "build:watch": "tsup --watch",
+        "build:docs": "npm run build && typedoc"
+    },
+    "author": {
+        "name": "Jason Zhang",
+        "email": "zzx2067@outlook.com"
+    },
+    "homepage": "https://kabeep.github.io/palette/",
+    "repository": "git@github.com:kabeep/palette.git",
+    "bugs": "https://github.com/kabeep/palette/issue",
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.4",
+        "@types/cli-color": "^2.0.6",
+        "@types/kuler": "^2.0.2",
+        "@types/node": "^22.10.1",
+        "@vitest/coverage-istanbul": "^3.0.2",
+        "@vitest/ui": "^3.0.2",
+        "ansi-colors": "^4.1.3",
+        "chalk": "^5.4.1",
+        "chalk-pipe": "^6.2.0",
+        "cli-color": "^2.0.4",
+        "cloc": "^2.2.0-cloc",
+        "colorette": "^2.0.20",
+        "husky": "^9.1.7",
+        "kuler": "^2.0.0",
+        "lint-staged": "^15.2.10",
+        "picocolors": "^1.1.1",
+        "rimraf": "^5.0.10",
+        "size-limit": "^11.1.6",
+        "size-limit-preset-node-lib": "^0.3.0",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.3.5",
+        "typedoc": "~0.26.11",
+        "typedoc-material-theme": "^1.2.0",
+        "typedoc-plugin-include-example": "^2.0.2",
+        "typedoc-plugin-inline-sources": "^1.1.0",
+        "typedoc-plugin-mdn-links": "^4.0.9",
+        "typedoc-plugin-missing-exports": "^3.1.0",
+        "typedoc-plugin-rename-documents": "^1.0.0",
+        "typedoc-plugin-replace-text": "^4.0.0",
+        "typedoc-plugin-version-header": "^1.0.0",
+        "typescript": "~5.6.3",
+        "vitest": "^3.0.2",
+        "yoctocolors": "^2.1.1"
+    },
+    "keywords": [
+        "color",
+        "colour",
+        "colors",
+        "terminal",
+        "console",
+        "cli",
+        "ansi",
+        "rgb",
+        "hex",
+        "256",
+        "palette",
+        "colorful"
+    ],
+    "engines": {
+        "node": ">=18"
+    },
+    "license": "MIT"
+}

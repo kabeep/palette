@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ES2015",
+        "moduleResolution": "Bundler",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "strict": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true,
+        "experimentalDecorators": true
+    },
+    "ts-node": {
+        "experimentalSpecifierResolution": "node",
+        "esm": true,
+        "transpileOnly": true
+    },
+    "include": ["src", "test", "performance"],
+    "exclude": ["node_modules", "dist"]
+}
