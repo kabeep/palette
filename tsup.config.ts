@@ -14,12 +14,11 @@ export default defineConfig((opts) => ({
     bundle: true,
     clean: !opts.watch,
     minify: false,
-    treeshake: false,
+    treeshake: opts.watch ? false : 'smallest',
     sourcemap: false,
     splitting: false,
     cjsInterop: true,
     legacyOutput: false,
-    replaceNodeEnv: true,
     dts: true,
     async onSuccess() {
         if (opts.watch) return;
