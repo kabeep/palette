@@ -1,8 +1,9 @@
-import { type Assertion, describe, expect, it } from 'vitest';
+import { type Assertion, beforeAll, describe, expect, it, vi } from 'vitest';
 import * as fns from '../../src';
+import * as constants from '../../src/constants';
 
-// @ts-expect-error: TS7053 use the it.each
 const createAssertion = (fn: string, input: string): Assertion =>
+    // @ts-expect-error: TS7053 use the it.each
     expect(fns[fn](input));
 
 const createExpected = (open: number, input: string, close: number) => {
@@ -14,6 +15,12 @@ const createExpected = (open: number, input: string, close: number) => {
 };
 
 describe('Modifier Keyword', () => {
+    beforeAll(() => {
+        vi.spyOn(constants, 'IS_16_COLORS_SUPPORTED', 'get').mockReturnValue(
+            true,
+        );
+    });
+
     it.each([
         [0, 'reset', 0],
         [1, 'bold', 22],

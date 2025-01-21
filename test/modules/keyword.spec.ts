@@ -1,4 +1,4 @@
-import { type Assertion, describe, expect, it } from 'vitest';
+import { type Assertion, beforeAll, describe, expect, it, vi } from 'vitest';
 import {
     CSS_KEYWORDS,
     type KeywordName,
@@ -6,6 +6,7 @@ import {
     hexToRgb,
     keyword,
 } from '../../src';
+import * as constants from '../../src/constants';
 
 const KEYWORD_TESTING_LIST: [number, number, number, string][] = [
     'red',
@@ -33,6 +34,12 @@ const createExpected =
     };
 
 describe('Foreground Keyword', () => {
+    beforeAll(() => {
+        vi.spyOn(constants, 'IS_16M_COLORS_SUPPORTED', 'get').mockReturnValue(
+            true,
+        );
+    });
+
     it.each(KEYWORD_TESTING_LIST)(
         '\x1b[38;2;%i;%i;%im%s\x1b[39m',
         createExpected(0),
@@ -40,6 +47,12 @@ describe('Foreground Keyword', () => {
 });
 
 describe('Background Keyword', () => {
+    beforeAll(() => {
+        vi.spyOn(constants, 'IS_16M_COLORS_SUPPORTED', 'get').mockReturnValue(
+            true,
+        );
+    });
+
     it.each(KEYWORD_TESTING_LIST)(
         '\x1b[48;2;%i;%i;%im%s\x1b[49m',
         createExpected(10),

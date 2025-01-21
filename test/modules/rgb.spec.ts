@@ -1,5 +1,6 @@
-import { type Assertion, describe, expect, it } from 'vitest';
+import { type Assertion, beforeAll, describe, expect, it, vi } from 'vitest';
 import { bgRgb, rgb } from '../../src';
+import * as constants from '../../src/constants';
 
 const createAssertion =
     (isBg = false) =>
@@ -19,6 +20,12 @@ const createExpected =
     };
 
 describe('RGB Foreground', () => {
+    beforeAll(() => {
+        vi.spyOn(constants, 'IS_16M_COLORS_SUPPORTED', 'get').mockReturnValue(
+            true,
+        );
+    });
+
     it.each([
         [255, 0, 0, 'red'],
         [0, 255, 0, 'green with closed\x1b[39m ANSI'],
@@ -27,6 +34,12 @@ describe('RGB Foreground', () => {
 });
 
 describe('RGB Background', () => {
+    beforeAll(() => {
+        vi.spyOn(constants, 'IS_16M_COLORS_SUPPORTED', 'get').mockReturnValue(
+            true,
+        );
+    });
+
     it.each([
         [255, 0, 0, 'red'],
         [0, 255, 0, 'green with closed\x1b[39m ANSI'],
