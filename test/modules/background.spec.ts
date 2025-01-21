@@ -1,4 +1,4 @@
-import { type Assertion, beforeAll, describe, expect, it, vi } from 'vitest';
+import { type Assertion, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import * as fns from '../../src';
 import * as constants from '../../src/constants';
 
@@ -41,7 +41,7 @@ const createExpected =
     };
 
 describe('Background Color', () => {
-    beforeAll(() => {
+    beforeEach(() => {
         vi.spyOn(constants, 'IS_16_COLORS_SUPPORTED', 'get').mockReturnValue(
             true,
         );
@@ -68,7 +68,7 @@ describe('Background Color', () => {
 });
 
 describe('Bright Background Color', () => {
-    beforeAll(() => {
+    beforeEach(() => {
         vi.spyOn(constants, 'IS_16_COLORS_SUPPORTED', 'get').mockReturnValue(
             true,
         );
