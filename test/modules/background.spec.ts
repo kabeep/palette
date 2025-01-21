@@ -1,6 +1,5 @@
-import { type Assertion, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
+import { type Assertion, describe, expect, it } from 'vitest';
 import * as fns from '../../src';
-import * as constants from '../../src/constants';
 
 const ANSI_BACKGROUND_BASE_OFFSET = 40;
 const ANSI_BRIGHT_BACKGROUND_OFFSET = 60;
@@ -41,12 +40,6 @@ const createExpected =
     };
 
 describe('Background Color', () => {
-    beforeEach(() => {
-        vi.spyOn(constants, 'IS_16_COLORS_SUPPORTED', 'get').mockReturnValue(
-            true,
-        );
-    });
-
     it.each(
         [
             ...ANSI_16_BACKGROUND_COLOR_LIST,
@@ -68,12 +61,6 @@ describe('Background Color', () => {
 });
 
 describe('Bright Background Color', () => {
-    beforeEach(() => {
-        vi.spyOn(constants, 'IS_16_COLORS_SUPPORTED', 'get').mockReturnValue(
-            true,
-        );
-    });
-
     it.each(
         [
             ...ANSI_16_BACKGROUND_COLOR_LIST,
