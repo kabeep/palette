@@ -14,7 +14,7 @@ jobs:
           override-ci-command: npm install
       - run:
           name: Run tests
-          command: npm test --passWithNoTests
+          command: FORCE_COLOR=3 npm test --passWithNoTests
   build-node:
     # Build node project
     executor: node/default
