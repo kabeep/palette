@@ -2,7 +2,7 @@
 
 <h1>Palette</h1>
 
-🎨 最快的 Node.js 库, 支持 Hex、RGB 和 tree-shaking 设置终端文本的颜色和样式
+🎨 一个 FP 范式的 Node.js 库用来设置终端文本的颜色和样式。
 
 [![NodeJS][node-image]][node-url]
 [![License][license-image]][license-url]
@@ -17,24 +17,19 @@
 
 ## 📖 简介
 
-> `chalk` 有友好的链式 API, 但也是我认为它不足的地方, 我并不完全认同它 ["固执己见"的防守型回答][chalk-faq-url]:
-> - 庞大的包体积, chalk@4 的体积是 _101KB_, chalk@5 也有 _43.2KB_。
-> - 没有 _tree-shaking_。
-> - 不支持 _pipe/compose_ 函数式编程。
-> - 在轻量场景中远不如 _静态ANSI字符串_ 的性价比。
+> `chalk` 有友好的链式 API，但也是我认为它不足的地方，尽管 sindresorhus 的杰出工作尽可能缩小了包体积，
+> 但我不认为核心问题在于 [为什么不换成更小的着色包？][chalk-faq-url]：
+> - 不能树摇，不能以 FP 范式例如 pipe/compose 来编码。
+> - 如果只需要着色红色失败和绿色成功信息，仍需要通过工厂函数创建完整的 `chalk`。
+> - 在轻量场景中远不如静态 ANSI 字符串的性价比。
 
-因此我用两个小时时间开发了 `@kabeep/palette` 包, 它和 `chalk` 一样支持 _ANSI 16 色_, _256 色_ 和 _16m 真彩色_。
+所以我创建了这个包，它和 `chalk` 一样支持 _ANSI 16 色_，_256 色_ 和 _16 百万真彩色_。
 
-比起其他轻量包, 除了基础的 ANSI 关键字, 它还支持 _[十六进制数字表示法 (Hex)][hex-triplet-url]_ /
+比起其他轻量包，除了基础的 ANSI 关键字，它还支持 _[十六进制数字表示法 (Hex)][hex-triplet-url]_ /
 _[三原色光模式 (RGB)][rgb-model-url]_ / _[CSS 关键字][css-keywords-url]_。
 
-但这不意味着它牺牲了 **体积** 和 **速度**, 相反的它在 [基准测试报告][perf-zh-cn-url] 中表现优异:
-
-- 它的 `ESModule` 文件仅有 _9.48KB_, `CommonJS` 也只有 _12.7KB_。
-- 在大量基准测试的样本数量中, 它的速度比 `chalk` 快 _1.7x_ 以上。
-- 它和 `colorette` 一样要远快于 NPM 上主流的替代品, 但提供了更多 API 特性。
-- 完全支持 `tree-shaking`, 对于只需要 _yellow_ / _red_ 提示样式的 CLI 程序, 可以无负担的引入。
-- 享受函数式编程。
+但这不意味着它牺牲了 **体积** 和 **性能**，相反它在 [基准测试报告][perf-zh-cn-url] 中表现优异。
+当然所有的着色包都已经足够快了，但如果你重视尺寸和性能， `@kabeep/palette` 是一个不错的选择。
 
 查看 [文档][docs-url]。
 

@@ -2,7 +2,7 @@
 
 <h1>Palette</h1>
 
-🎨 The fastest Node.js library to set terminal text colours & styles with hex, rgb and tree-shaking.
+🎨 A Node.js library for terminal text colour & style in FP.
 
 [![NodeJS][node-image]][node-url]
 [![License][license-image]][license-url]
@@ -17,28 +17,24 @@ English | [简体中文][zh-cn-url]
 
 ## 📖 Introduction
 
-> While chalk offers a user-friendly, chainable API, I don’t fully agree with
-> its [defensive response with "a stubborn stance"][chalk-faq-url]. Here’s why:
-> - Its large package size: chalk@4 is _101KB_ and chalk@5 is still _43.2KB_.
-> - No _tree-shaking_ support.
-> - Lacks _pipe/compose_ functional programming support.
+> `chalk` offers a user-friendly, chainable API.
+> In spite of the excellent work done by @sindresorhus to reduce the size of the packaging as much as possible.
+> But my view is that the key issue is not ["Why not switch to a smaller coloring package?"][chalk-faq-url].
+> Here’s why:
+> - No tree-shaking support, and no FP such as pipe/compose.
+> - You will still need to create the full `chalk` using the factory function
+> if you only need to colour the red failure and green success messages.
 > - In lightweight scenarios, _static ANSI strings_ are much more cost-effective.
 
-This led me to develop the `@kabeep/palette` package in just two hours, which, like chalk, supports _ANSI 16 colors_,
-_256 colors_, and _16m true-colors_.
-
+So I created this package.
+It supports ANSI _16 colours_, _256 colours_ and _16 million true colours_ like `chalk`.
 Compared to other lightweight alternatives, it goes beyond basic ANSI keywords and also supports
 _[Hex Triplet][hex-triplet-url]_, _[RGB Color Model][rgb-model-url]_, and _[CSS Keywords][css-keywords-url]_.
 
-But this doesn’t mean it compromises on **size** or **performance**.
-On the contrary, it performs excellently in [Benchmark Reports][perf-en-us-url]:
-
-- Its `ESModule` file is just _9.48KB_, with `CommonJS` only _12.7KB_.
-- In a wide range of benchmark samples, it outperforms `chalk` by more than _1.7x_ in speed.
-- Like `colorette`, it's much faster than the mainstream packages on NPM, but offers **more API features**.
-- Fully supports `tree-shaking`, so CLI apps needing only basic styles like _yellow_ or _red_ can import it with no
-  overhead.
-- Enjoy functional programming with ease.
+But this does not mean it compromises on **size** or **performance**.
+On the contrary, it performs excellently in [Benchmark Reports][perf-en-us-url].
+Of course, all the coloring packages are more than fast enough,
+I am just saying `@kabeep/palette` is a good choice for people who value size and performance.
 
 See [documentation][docs-url].
 
