@@ -158,7 +158,7 @@
 }
 </style><link rel="stylesheet" href="../assets/material-style.css"></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"></div><div class="field"><div id="tsd-toolbar-links"><a href="https://kabeep.github.io/palette/">Docs</a><a href="https://github.com/kabeep/palette">GitHub</a><a href="https://www.npmjs.com/package/@kabeep/palette">NPM</a></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@kabeep/palette - v1.0.1</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../modules.html">@kabeep/palette</a></li><li><a href="____.html">简体中文</a></li></ul></div><div class="tsd-panel tsd-typography"><div align="center">
 <h1>Palette</h1>
-<p>🎨 最快的 Node.js 库, 支持 Hex、RGB 和 tree-shaking 设置终端文本的颜色和样式</p>
+<p>🎨 一个 FP 范式的 Node.js 库用来设置终端文本的颜色和样式。</p>
 <p><a href="https://nodejs.org" target="_blank" class="external"><img src="https://img.shields.io/node/v/%40kabeep%2Fpalette?color=lightseagreen" alt="NodeJS" title="Node.js Version"></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/kabeep/palette?color=slateblue" alt="License" title="License"></a>
 <a href="https://www.npmjs.com/package/@kabeep/palette" target="_blank" class="external"><img src="https://img.shields.io/npm/d18m/%40kabeep%2Fpalette?color=cornflowerblue" alt="NPM" title="NPM Downloads"></a>
@@ -168,25 +168,19 @@
 <p><a href="../index.html">English</a> | 简体中文</p>
 </div>
 <a id="md:📖-简介" class="tsd-anchor"></a><h2 class="tsd-anchor-link">📖 简介<a href="#md:📖-简介" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><blockquote>
-<p><code>chalk</code> 有友好的链式 API, 但也是我认为它不足的地方, 我并不完全认同它 <a href="https://github.com/chalk/chalk?tab=readme-ov-file#why-not-switch-to-a-smaller-coloring-package" target="_blank" class="external">"固执己见"的防守型回答</a>:</p>
+<p><code>chalk</code> 有友好的链式 API，但也是我认为它不足的地方，尽管 sindresorhus 的杰出工作尽可能缩小了包体积，
+但我不认为核心问题在于 <a href="https://github.com/chalk/chalk?tab=readme-ov-file#why-not-switch-to-a-smaller-coloring-package" target="_blank" class="external">为什么不换成更小的着色包？</a>：</p>
 <ul>
-<li>庞大的包体积, chalk@4 的体积是 <em>101KB</em>, chalk@5 也有 <em>43.2KB</em>。</li>
-<li>没有 <em>tree-shaking</em>。</li>
-<li>不支持 <em>pipe/compose</em> 函数式编程。</li>
-<li>在轻量场景中远不如 <em>静态ANSI字符串</em> 的性价比。</li>
+<li>不能树摇，不能以 FP 范式例如 pipe/compose 来编码。</li>
+<li>如果只需要着色红色失败和绿色成功信息，仍需要通过工厂函数创建完整的 <code>chalk</code>。</li>
+<li>在轻量场景中远不如静态 ANSI 字符串的性价比。</li>
 </ul>
 </blockquote>
-<p>因此我用两个小时时间开发了 <code>@kabeep/palette</code> 包, 它和 <code>chalk</code> 一样支持 <em>ANSI 16 色</em>, <em>256 色</em> 和 <em>16m 真彩色</em>。</p>
-<p>比起其他轻量包, 除了基础的 ANSI 关键字, 它还支持 <em><a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet" target="_blank" class="external">十六进制数字表示法 (Hex)</a></em> /
+<p>所以我创建了这个包，它和 <code>chalk</code> 一样支持 <em>ANSI 16 色</em>，<em>256 色</em> 和 <em>16 百万真彩色</em>。</p>
+<p>比起其他轻量包，除了基础的 ANSI 关键字，它还支持 <em><a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet" target="_blank" class="external">十六进制数字表示法 (Hex)</a></em> /
 <em><a href="https://en.wikipedia.org/wiki/RGB_color_model" target="_blank" class="external">三原色光模式 (RGB)</a></em> / <em><a href="https://www.w3.org/wiki/CSS/Properties/color/keywords" target="_blank" class="external">CSS 关键字</a></em>。</p>
-<p>但这不意味着它牺牲了 <strong>体积</strong> 和 <strong>速度</strong>, 相反的它在 <a href="./______.html">基准测试报告</a> 中表现优异:</p>
-<ul>
-<li>它的 <code>ESModule</code> 文件仅有 <em>9.48KB</em>, <code>CommonJS</code> 也只有 <em>12.7KB</em>。</li>
-<li>在大量基准测试的样本数量中, 它的速度比 <code>chalk</code> 快 <em>1.7x</em> 以上。</li>
-<li>它和 <code>colorette</code> 一样要远快于 NPM 上主流的替代品, 但提供了更多 API 特性。</li>
-<li>完全支持 <code>tree-shaking</code>, 对于只需要 <em>yellow</em> / <em>red</em> 提示样式的 CLI 程序, 可以无负担的引入。</li>
-<li>享受函数式编程。</li>
-</ul>
+<p>但这不意味着它牺牲了 <strong>体积</strong> 和 <strong>性能</strong>，相反它在 <a href="./______.html">基准测试报告</a> 中表现优异。
+当然所有的着色包都已经足够快了，但如果你重视尺寸和性能， <code>@kabeep/palette</code> 是一个不错的选择。</p>
 <p>查看 <a href="https://kabeep.github.io/palette" target="_blank" class="external">文档</a>。</p>
 <a id="md:📦-安装" class="tsd-anchor"></a><h2 class="tsd-anchor-link">📦 安装<a href="#md:📦-安装" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">@kabeep/palette</span><span class="hl-1"> </span><span class="hl-3">--save</span>
 </code><button type="button">Copy</button></pre>
