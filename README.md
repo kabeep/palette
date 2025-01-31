@@ -152,6 +152,10 @@ See the full list at [W3C Wiki][css-keywords-url].
 - [chalk-pipe][chalk-pipe-url] - Collating cssKeywords data.
 - [yoctocolors][yoctocolors-url] - Implement format function & style description.
 
+## 🔗 Related
+
+- [palette-cli][palette-cli-url] - A Node.js Library to make your terminal input colorful.
+
 ## 🤝 Contribution
 
 Contributions via Pull Requests or [Issues][issues-url] are welcome.
@@ -184,6 +188,7 @@ This project is licensed under the MIT License. See the [LICENSE][license-url] f
 [chalk-pipe-url]: https://github.com/LitoMore/chalk-pipe/blob/main/source/styles.ts
 [yoctocolors-url]: https://github.com/sindresorhus/yoctocolors/blob/main/base.js#L27
 [chalk-faq-url]: https://github.com/chalk/chalk?tab=readme-ov-file#why-not-switch-to-a-smaller-coloring-package
+[palette-cli-url]: https://github.com/kabeep/palette-cli
 
 [license-image]: https://img.shields.io/github/license/kabeep/palette?color=slateblue "License"
 [license-url]: LICENSE

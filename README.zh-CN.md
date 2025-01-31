@@ -147,6 +147,10 @@ console.log(palette('Error'), yellowBright('Warning'), hex('#ff0000')('Message')
 - [chalk-pipe][chalk-pipe-url] - 整理 cssKeywords 数据。
 - [yoctocolors][yoctocolors-url] - 实现了 format 函数。
 
+## 🔗 关联库
+
+- [palette-cli][palette-cli-url] - 一个 Node.js 库使你的终端输入变得丰富多彩。
+
 ## 🤝 贡献
 
 欢迎通过 Pull Requests 或 [Issues][issues-url] 来贡献你的想法和代码。
@@ -179,6 +183,7 @@ console.log(palette('Error'), yellowBright('Warning'), hex('#ff0000')('Message')
 [chalk-pipe-url]: https://github.com/LitoMore/chalk-pipe/blob/main/source/styles.ts
 [yoctocolors-url]: https://github.com/sindresorhus/yoctocolors/blob/main/base.js#L27
 [chalk-faq-url]: https://github.com/chalk/chalk?tab=readme-ov-file#why-not-switch-to-a-smaller-coloring-package
+[palette-cli-url]: https://github.com/kabeep/palette-cli
 
 [license-image]: https://img.shields.io/github/license/kabeep/palette?color=slateblue "License"
 [license-url]: LICENSE
