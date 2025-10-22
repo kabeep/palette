@@ -1,11 +1,5 @@
 import { type Assertion, describe, expect, it } from 'vitest';
-import {
-    CSS_KEYWORDS,
-    type KeywordName,
-    bgKeyword,
-    hexToRgb,
-    keyword,
-} from '../../src';
+import { bgKeyword, CSS_KEYWORDS, hexToRgb, keyword, type KeywordName, validKeyword } from '../../src';
 
 const KEYWORD_TESTING_LIST: [number, number, number, string][] = [
     'red',
@@ -43,5 +37,24 @@ describe('Background Keyword', () => {
     it.each(KEYWORD_TESTING_LIST)(
         '\x1b[48;2;%i;%i;%im%s\x1b[49m',
         createExpected(10),
+    );
+});
+
+const KEYWORD_VALIDATE_TESTING_LIST: [string, boolean][] = [
+    ['', false],
+    ['white', true],
+    ['maroon', true],
+    ['darkblue', true],
+    ['darkolivegreen', true],
+    ['lightcoral', true],
+    ['palette', false],
+    ['whiter', false],
+];
+
+describe('Valid Keyword', () => {
+    it.each(KEYWORD_VALIDATE_TESTING_LIST)(
+        'Is keyword "%s" valid: %s',
+        (keyword: string, isValid: boolean) =>
+            expect(validKeyword(keyword)).toBe(isValid),
     );
 });

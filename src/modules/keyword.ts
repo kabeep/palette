@@ -8,5 +8,6 @@ const keywords = new Map(Object.entries(CSS_KEYWORDS)) as Map<
     string
 >;
 
+export const validKeyword = (key: string) => keywords.has(key as KeywordName);
 export const keyword = (key: KeywordName) => hex(keywords.get(key) ?? '');
 export const bgKeyword = (key: KeywordName) => bgHex(keywords.get(key) ?? '');

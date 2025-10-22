@@ -1,8 +1,8 @@
 import { type Assertion, describe, expect, it } from 'vitest';
 import * as fns from '../../src';
 
-// @ts-expect-error: TS7053 use the it.each
 const createAssertion = (fn: string, input: string): Assertion =>
+    // @ts-expect-error: TS7053 use the it.each
     expect(fns[fn](input));
 
 const createExpected = (open: number, input: string, close: number) => {
