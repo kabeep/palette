@@ -14,7 +14,7 @@ module.exports = {
         'typedoc-plugin-mdn-links',
         'typedoc-plugin-missing-exports',
         'typedoc-plugin-include-example',
-        'typedoc-plugin-inline-sources',
+        // 'typedoc-plugin-inline-sources',
         'typedoc-plugin-replace-text',
         'typedoc-plugin-rename-documents',
         'typedoc-plugin-version-header',
