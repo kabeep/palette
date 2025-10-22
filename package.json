@@ -44,7 +44,7 @@
     "repository": "git@github.com:kabeep/palette.git",
     "bugs": "https://github.com/kabeep/palette/issue",
     "devDependencies": {
-        "@biomejs/biome": "^1.9.4",
+        "@biomejs/biome": "^2.2.7",
         "@types/cli-color": "^2.0.6",
         "@types/kuler": "^2.0.2",
         "@types/node": "^22.10.1",
